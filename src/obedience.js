@@ -1,0 +1,5 @@
+/**
+ * @namespace
+ * @private
+ */
+var Obedience = {};

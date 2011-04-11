@@ -1,0 +1,18 @@
+h1. Welcome to Obedience!
+
+Obedience is a workflow framework aimed at structuring the javascript code into wrappers, called Behaviors.
+
+A single web page with javascript may have a ton of interactive features to offer to the user. 
+Obedience gives the developer a solution of grouping the features and storing them in a clean and maintainable fashion.
+
+The current version is fully functional, but is not documented properly.
+
+h2. Testing
+
+Tests are build in Jasmine and run on nodejs. In order to run them, install jasmine-node via npm:
+  
+  npm install jasmine-node
+
+h2. Copyright
+
+Copyright (c) 2011 Marcin Bunsch. See LICENSE for details.

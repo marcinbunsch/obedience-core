@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+joined = %w{obedience behavior core debug hook resource router}.collect do |name|
+  File.read("src/#{name}.js")
+end.join("\n")
+
+File.open('obedience.core.js', 'w') { |f| f.write(joined) }
+
+begin
+  require 'rubygems'
+  require 'packr'
+  compressed = Packr.pack(joined, :shrink_vars => true, :base62 => false)
+  File.open('obedience.core.min.js', 'w') { |f| f.write(compressed) }
+rescue 
+  puts "Failed to build minified version: #{$!.message}"
+end
