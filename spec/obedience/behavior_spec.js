@@ -12,8 +12,8 @@ describe('Behavior', function() {
   
   describe('constructor', function() {
     it('should do create a new Behavior', function() {
-      behavior.name.       should_equal('Testing')
-      behavior.callback(). should_equal(1)
+      behavior.name.       should_be('Testing')
+      behavior.callback(). should_be(1)
     })
   })
   
@@ -22,16 +22,16 @@ describe('Behavior', function() {
     afterEach(function ()  { Obedience.Router.routes.common = []; });
     
     it("should map to all", function() {
-      Obedience.Router.routes.common.length.           should_equal(1)
-      Obedience.Router.routes.common[0].behavior.name. should_equal('Testing')
+      Obedience.Router.routes.common.length.           should_be(1)
+      Obedience.Router.routes.common[0].behavior.name. should_be('Testing')
     })
 
     it("should not map on strings", function() {
-      Obedience.Router.routes.string.length.           should_equal(0)
+      Obedience.Router.routes.string.length.           should_be(0)
     })
 
     it("should not map on regex", function() {
-      Obedience.Router.routes.regex.length.            should_equal(0)
+      Obedience.Router.routes.regex.length.            should_be(0)
     })
 
   })
@@ -41,16 +41,16 @@ describe('Behavior', function() {
     afterEach(function ()  { Obedience.Router.routes.string = []   });
   
     it("should not map to all", function() {
-      Obedience.Router.routes.common.length.           should_equal(0)
+      Obedience.Router.routes.common.length.           should_be(0)
     })
 
     it("should map multiple on strings", function() {
-      Obedience.Router.routes.string.length.           should_equal(2)
+      Obedience.Router.routes.string.length.           should_be(2)
       Obedience.Router.routes.string[0].behavior.name. should_be('Testing')
     })
     
     it("should not map on regex", function() {
-      Obedience.Router.routes.regex.length.            should_equal(0)
+      Obedience.Router.routes.regex.length.            should_be(0)
     })
     
   })

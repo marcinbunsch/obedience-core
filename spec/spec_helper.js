@@ -32,11 +32,13 @@ include('./src/hook.js')
 // include('./obedience.core.min.js')
 
 // Syntactic sugar to make specs more like Rspec
-// The hack in here is to prevent jqXHR fram automatically calling these functions 
-// and passing a callback which is interpreted by jasmine as an expectation
-Object.prototype.should_equal     = function(compare) { 
-  if (!this.getAllResponseHeaders && this != global) expect(this).toEqual(compare); 
+var Sugar = {
+  should_be: function(compare) { expect(this).toEqual(compare); },
+  should_not_be: function(compare) { expect(this).not.toEqual(compare); }
 }
-Object.prototype.should_be        = Object.prototype.should_equal
-Object.prototype.should_not_equal = function(compare) { 
-  if (this.getAllResponseHeaders && this != global) expect(this).not.toEqual(compare); }
+String.prototype.should_be        = Sugar.should_be
+Number.prototype.should_be        = Sugar.should_be
+Array.prototype. should_be        = Sugar.should_be
+String.prototype.should_not_be    = Sugar.should_not_be
+Number.prototype.should_not_be    = Sugar.should_not_be
+Array.prototype. should_not_be    = Sugar.should_not_be
