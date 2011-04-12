@@ -145,5 +145,5 @@ if (typeof(jQuery) != 'undefined') {
 } else if (typeof(Prototype) != 'undefined') { 
   Event.observe($(window), 'load', Obedience.Router.run);
 } else if (typeof(window) != 'undefined') { 
-  window.onload = Router.run;
+  window.onload = Obedience.Router.run;
 }

@@ -247,6 +247,7 @@ Obedience.Resource = function(options) {
 		var params = {
       'authenticity_token': jQuery('meta[name="csrf-token"]').attr('content')
     };
+
     jQuery.ajax({
       type: 'GET',
       url: options.url + '/' + id + '.json',
@@ -474,5 +475,5 @@ if (typeof(jQuery) != 'undefined') {
 } else if (typeof(Prototype) != 'undefined') { 
   Event.observe($(window), 'load', Obedience.Router.run);
 } else if (typeof(window) != 'undefined') { 
-  window.onload = Router.run;
+  window.onload = Obedience.Router.run;
 }

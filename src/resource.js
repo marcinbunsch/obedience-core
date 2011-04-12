@@ -103,6 +103,7 @@ Obedience.Resource = function(options) {
 		var params = {
       'authenticity_token': jQuery('meta[name="csrf-token"]').attr('content')
     };
+
     jQuery.ajax({
       type: 'GET',
       url: options.url + '/' + id + '.json',
