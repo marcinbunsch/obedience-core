@@ -37,7 +37,6 @@ include('./src/hook.js')
 Object.prototype.should_equal     = function(compare) { 
   if (!this.getAllResponseHeaders && this != global) expect(this).toEqual(compare); 
 }
-// func.toString = function() { return 'Object' };
 Object.prototype.should_be        = Object.prototype.should_equal
 Object.prototype.should_not_equal = function(compare) { 
   if (this.getAllResponseHeaders && this != global) expect(this).not.toEqual(compare); }

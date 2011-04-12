@@ -2,7 +2,7 @@ require('./../spec_helper');
 
 describe('Resource', function() {
  
-  window.document.head.innerHTML = '<meta name="csrf-token" content="TOKEN">'  
+  if (window.document.head.innerHTML == '') window.document.head.innerHTML = '<meta name="csrf-token" content="TOKEN">'  
   
   describe('.find', function() {
     
