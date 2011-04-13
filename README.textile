@@ -13,6 +13,8 @@ Tests are build in Jasmine and run on nodejs. In order to run them, install jasm
   
   npm install jasmine-node
 
+In order to run tests, you need to have "jsdom":https://github.com/tmpvar/jsdom installed.
+
 h2. Copyright
 
 Copyright (c) 2011 Marcin Bunsch. See LICENSE for details.
