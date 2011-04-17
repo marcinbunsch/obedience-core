@@ -14,6 +14,9 @@ Obedience.Router = {
   exceptions: {},
   _path: null,
   ran: false,
+  boot: function() {
+    Obedience.Router.run()
+  },
   /**
    *  @private
    *  Get the current path
@@ -141,9 +144,9 @@ Obedience.Router = {
 
 // attach the Router.run() method to onloads in different frameworks
 if (typeof(jQuery) != 'undefined') { 
-  jQuery(Obedience.Router.run);
+  jQuery(Obedience.Router.boot);
 } else if (typeof(Prototype) != 'undefined') { 
-  Event.observe($(window), 'load', Obedience.Router.run);
+  Event.observe($(window), 'load', Obedience.Router.boot);
 } else if (typeof(window) != 'undefined') { 
-  window.onload = Obedience.Router.run;
+  window.onload = Obedience.Router.boot;
 }

@@ -17,6 +17,9 @@ include('./spec/helpers/jquery.js')
 // Make sure jQuery is available in a global scope
 global.jQuery = window.jQuery
 
+// This is required by the Router
+window.location.href = 'http://example.com'
+
 // Load up source files
 include('./src/obedience.js')
 include('./src/behavior.js')
