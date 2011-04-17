@@ -11,7 +11,7 @@ h2. Testing
 
 Tests are build in Jasmine and run on Jessie. In order to run them, install jessie via npm:
   
-  npm install jessie
+pre. npm install jessie
 
 In order to run tests, you need to have "jsdom":https://github.com/tmpvar/jsdom >= 0.2.0 installed.
 
