@@ -34,14 +34,4 @@ include('./src/hook.js')
 // include('./obedience.core.js')
 // include('./obedience.core.min.js')
 
-// Syntactic sugar to make specs more like Rspec
-var Sugar = {
-  should_be: function(compare) { expect(this).toEqual(compare); },
-  should_not_be: function(compare) { expect(this).not.toEqual(compare); }
-}
-String.prototype.should_be        = Sugar.should_be
-Number.prototype.should_be        = Sugar.should_be
-Array.prototype. should_be        = Sugar.should_be
-String.prototype.should_not_be    = Sugar.should_not_be
-Number.prototype.should_not_be    = Sugar.should_not_be
-Array.prototype. should_not_be    = Sugar.should_not_be
+require('jessie').sugar()
