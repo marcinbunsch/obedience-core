@@ -9,11 +9,11 @@ The current version is fully functional, but is not documented properly.
 
 h2. Testing
 
-Tests are build in Jasmine and run on nodejs. In order to run them, install jasmine-node via npm:
+Tests are build in Jasmine and run on Jessie. In order to run them, install jessie via npm:
   
-  npm install jasmine-node
+  npm install jessie
 
-In order to run tests, you need to have "jsdom":https://github.com/tmpvar/jsdom installed.
+In order to run tests, you need to have "jsdom":https://github.com/tmpvar/jsdom >= 0.2.0 installed.
 
 h2. Copyright
 
